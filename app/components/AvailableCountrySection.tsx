@@ -12,11 +12,11 @@ export default function AvailableinCountrySection() {
             </span>
             </div>
            
-            <div className="grid grid-cols-2 sm:grid-cols-5 text-center sm:text-left gap-8 pt-14">
+            <div className="grid grid-cols-2 sm:grid-cols-5 text-center sm:text-center gap-8 pt-14">
               {countriesList.slice(0, 21).map((country) => {
                 return (
                   <div key={country.code}>
-                    <p className="text-5xl">{country.emoji}</p>
+                    <span className={`fi fi-${country.code.toLowerCase()} text-5xl mb-1 h-12 w-12`}></span>
                     <p className="">{country.name}</p>
                   </div>
                 );

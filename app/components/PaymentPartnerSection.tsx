@@ -3,16 +3,16 @@ import Image from "next/image";
 // visa, mastercard, union pay
 export default function PaymentPartnerSection() {
   return (
-    <section className="bg-gray-100 w-full py-6 ">
-      <div className="max-w-7xl mx-auto h-full w-full flex space-x-6 items-center">
-        <span className="font-semibold text-deep-forest-green-900">Technology partners</span>
-        <div className="flex items-center space-x-3">
+    <section className="bg-gray-100 w-full py-8">
+      <div className="max-w-7xl mx-auto h-full w-full flex flex-col items-center justify-center">
+        <p className="font-semibold text-center text-deep-forest-green-900">Technology partners</p>
+        <div className="flex items-center space-x-3 mt-4">
         <Image
           width={24}
           height={24}
           alt="aws-logo"
-          src="/img/payment/aws.svg"
-          className="w-24 h-24"
+          src="/img/payment/aws.png"
+          className="w-10 h-10 object-contain"
         />
 
         <Image
