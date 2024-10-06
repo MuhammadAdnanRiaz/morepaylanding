@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HowP2PSection() {
   return (
-    <section className="w-full text-gray-600 body-font">
+    <section className="w-full  text-gray-600 body-font">
       <div className="max-w-7xl px-5 py-24 mx-auto">
         <div className="text-center mb-20">
           <h1 className="sm:text-5xl text-2xl font-medium title-font text-deep-forest-green-900 mb-4 animate-fade-up">
@@ -77,9 +77,7 @@ export default function HowP2PSection() {
             </div>
           </div>
         </div>
-        <button className="flex mx-auto mt-16 text-white bg-deep-forest-green-900 border-0 py-2 px-8 focus:outline-none hover:bg-deep-forest-green-800 rounded text-lg">
-          Learn more
-        </button>
+    
       </div>
     </section>
   );
