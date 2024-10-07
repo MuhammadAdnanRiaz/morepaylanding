@@ -5,7 +5,7 @@ export default function HowP2PSection() {
     <section className="w-full  text-gray-600 body-font">
       <div className="max-w-7xl px-5 py-24 mx-auto">
         <div className="text-center mb-20">
-          <h1 className="sm:text-5xl text-2xl font-medium title-font text-deep-forest-green-900 mb-4 animate-fade-up">
+          <h1 className="sm:text-5xl text-2xl font-medium title-font text-deep-forest-green-900 mb-4 intersect:animate-fade-up animate-duration-1000 animate-delay-500">
             How morepay works
           </h1>
           <div className="flex mt-6 justify-center">
@@ -18,16 +18,16 @@ export default function HowP2PSection() {
               <Image
                 alt="p2p step 1"
                 width={80}
-                className="pl-3 w-20 h-20"
+                className="pl-3 w-20 h-20 intersect:animate-fade-up animate-duration-1000 animate-delay-500"
                 height={80}
                 src="/img/p2p-step-1.gif"
               />
             </div>
             <div className="flex-grow">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-3 animate-fade-up">
+              <h2 className="text-gray-900 text-lg title-font font-medium mb-3 intersect:animate-fade-up animate-duration-1000 animate-delay-500">
                 1. Place an Order
               </h2>
-              <p className="leading-relaxed text-base animate-fade-up">
+              <p className="leading-relaxed text-base intersect:animate-fade-up animate-duration-1000 animate-delay-500">
                 Once you place a P2P order, the crypto asset will be escrowed by
                 Binance P2P.
               </p>
@@ -38,16 +38,16 @@ export default function HowP2PSection() {
             <Image
                 alt="p2p step 1"
                 width={80}
-                className="pl-3 w-20 h-20"
+                className="pl-3 w-20 h-20 intersect:animate-fade-up animate-duration-1000 animate-delay-500"
                 height={80}
                 src="/img/p2p-step-2.gif"
               />
             </div>
             <div className="flex-grow">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-3 animate-fade-up">
+              <h2 className="text-gray-900 text-lg title-font font-medium mb-3 intersect:animate-fade-up animate-duration-1000 animate-delay-500">
                 2. Pay the Seller
               </h2>
-              <p className="leading-relaxed text-base animate-fade-up">
+              <p className="leading-relaxed text-base intersect:animate-fade-up animate-duration-1000 animate-delay-500">
                 Send money to the seller via the suggested payment methods.
                 Complete the fiat transaction and click &quot;Transferred, notify
                 seller&quot; on Binance P2P.
@@ -60,16 +60,16 @@ export default function HowP2PSection() {
             <Image
                 alt="p2p step 1"
                 width={80}
-                className="pl-3 w-20 h-20"
+                className="pl-3 w-20 h-20 intersect:animate-fade-up animate-duration-1000 animate-delay-500"
                 height={80}
                 src="/img/p2p-step-3.gif"
               />
             </div>
             <div className="flex-grow">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-3 animate-fade-up">
+              <h2 className="text-gray-900 text-lg title-font font-medium mb-3 intersect:animate-fade-up animate-duration-1000 animate-delay-500">
                 3. Receive Crypto
               </h2>
-              <p className="leading-relaxed text-base animate-fade-up">
+              <p className="leading-relaxed text-base intersect:animate-fade-up animate-duration-1000 animate-delay-500">
                 Once the seller confirms receipt of money, the escrowed crypto
                 will be released to you.
               </p>

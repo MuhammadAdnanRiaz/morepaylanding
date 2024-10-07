@@ -1,3 +1,4 @@
+'use client'
 import Footer from "./components/Footer";
 import OpenAccountCTA from "./components/OpenAccountCTA";
 import Banner from "./components/Banner";
@@ -10,8 +11,13 @@ import MoneyTransferSection from "./components/MoneyTransferSection";
 import CurrencyConversionSection from "./components/CurrencyConversionSection";
 import CustomerReviewSection from "./components/CustomerReviewSection";
 import AvailableinCountrySection from "./components/AvailableCountrySection";
+import { useEffect } from "react";
+import { Observer } from 'tailwindcss-intersect';
 
 export default function Home() {
+  useEffect(() => {
+    Observer.start()
+  }, [])
   return (
     <main className="font-display grid  items-center justify-items-center min-h-screen">
       <Banner />
