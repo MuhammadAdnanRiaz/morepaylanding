@@ -14,7 +14,7 @@ export default function CustomerReviewSection() {
               />
               <p className="leading-relaxed intersect:animate-fade-up animate-duration-1000 animate-delay-500">
                 Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki
-                taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman
+                taxidermy 90&apos;s cronut +1 kinfolk. Single-origin coffee ennui shaman
                 taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid
                 fanny pack vaporware.
               </p>
@@ -34,7 +34,7 @@ export default function CustomerReviewSection() {
               />
               <p className="leading-relaxed intersect:animate-fade-up animate-duration-1000 animate-delay-500">
                 Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki
-                taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman
+                taxidermy 90&apos;s cronut +1 kinfolk. Single-origin coffee ennui shaman
                 taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid
                 fanny pack vaporware.
               </p>
@@ -54,7 +54,7 @@ export default function CustomerReviewSection() {
               />
               <p className="leading-relaxed intersect:animate-fade-up animate-duration-1000 animate-delay-500">
                 Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki
-                taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman
+                taxidermy 90&apos;s cronut +1 kinfolk. Single-origin coffee ennui shaman
                 taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid
                 fanny pack vaporware.
               </p>
