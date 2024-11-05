@@ -11,14 +11,19 @@ export default function CurrecnyCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
+        <CardTitle>
+          <span className="flex space-x-2 items-center">
+            {" "}
+            <span
+              className={`fi fi-${"bz"} text-2xl rounded-full border mb-1 h-8 object-fill w-auto`}
+            ></span>
+            <span className="text-xl">USD</span>
+          </span>
+        </CardTitle>
       </CardHeader>
-      <CardContent>
-        <p>Card Content</p>
-      </CardContent>
+
       <CardFooter>
-        <p>Card Footer</p>
+        <p className="font-bold text-lg">123,123</p>
       </CardFooter>
     </Card>
   );
