@@ -6,6 +6,8 @@ import * as Yup from 'yup';
 import Image from "next/image";
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { Role } from "@/app/services/types";
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 
 interface FormData {
@@ -39,10 +41,21 @@ interface RegisterAuthFormProps {
 
 export default function RegisterAuthForm({ roles }: RegisterAuthFormProps) {
     const [parent] = useAutoAnimate();
+    const searchParams = useSearchParams()
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<FormData>({
-        resolver: yupResolver(validationSchema)
+    const referralCode = searchParams.get('referral_code')
+
+    console.log('referecl code', referralCode)
+
+    const { register, handleSubmit, watch, formState: { errors }, getValues, setValue } = useForm<FormData>({
+        resolver: yupResolver(validationSchema),
     });
+
+    useEffect(() => {
+        if (referralCode && getValues('referral')?.trim() === '') {
+            setValue('referral', referralCode.toString())
+        }
+    }, [referralCode, setValue, getValues])
 
     const onSubmit = (data: FormData) => {
         // Handle form submission, e.g., send data to backend
@@ -60,8 +73,8 @@ export default function RegisterAuthForm({ roles }: RegisterAuthFormProps) {
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                             Sign up
                         </h1>
-                        <form ref={parent} className="space-y-4 md:space-y-6" onSubmit={handleSubmit(onSubmit)}>
-                            <div className="grid grid grid-cols-1 sm:grid-cols-2 gap-2 gap-2">
+                        <form ref={parent} className="space-y-4 md:space-y-2" onSubmit={handleSubmit(onSubmit)}>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                 <div>
                                     <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                         First Name
@@ -124,7 +137,7 @@ export default function RegisterAuthForm({ roles }: RegisterAuthFormProps) {
                                             <option key={role.id} value={role.name}>{role.name}</option>
                                         ))}
                                     </select>
-                                    <div className={`mt-1 min-h-[1.5rem] transition-all duration-300 ${errors.role ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
+                                    <div className={`mt-1 min-h-[0.5rem] transition-all duration-300 ${errors.role ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
                                         {errors.role && <p className="text-red-500 text-sm">{errors.role.message}</p>}
                                     </div>
                                 </div>
