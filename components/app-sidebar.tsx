@@ -16,6 +16,7 @@ import {
   ArrowLeftRight,
   HandCoins,
   BadgeEuro,
+  Coins,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -76,12 +77,17 @@ const data = {
       url: "#",
       icon: ArrowLeftRight,
     },
+    {
+      title: "Loyality",
+      url: "/home/loyality",
+      icon: Coins,
+    },
   ],
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar className="border-none shadow-2xl font-display" collapsible="icon" {...props}>
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>

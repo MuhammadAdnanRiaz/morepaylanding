@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
+import { Toaster as Toasterr } from "@/components/ui/toaster"
+
 import localFont from "next/font/local";
 import "./globals.css";
 import "../node_modules/flag-icons/css/flag-icons.min.css";
@@ -20,7 +22,6 @@ export const metadata: Metadata = {
   description: "",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         {children}
         <Toaster />
+        <Toasterr />
       </body>
     </html>
   );

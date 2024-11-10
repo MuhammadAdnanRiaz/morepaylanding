@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "code": "us",
+    "name": "United States",
+    "currency": "USD",
+    "symbol": "$",
+    "flag": "https://flagicons.lipis.dev/flags/4x3/us.svg"
+  },
+  {
+    "id": 2,
+    "code": "gb",
+    "name": "United Kingdom",
+    "currency": "GBP",
+    "symbol": "£",
+    "flag": "https://flagicons.lipis.dev/flags/4x3/gb.svg"
+  },
+  {
+    "id": 3,
+    "code": "ng",
+    "name": "Nigeria",
+    "currency": "NGN",
+    "symbol": "₦",
+    "flag": "https://flagicons.lipis.dev/flags/4x3/ng.svg"
+  }
+]
