@@ -13,6 +13,7 @@ import CustomerReviewSection from "./components/CustomerReviewSection";
 import AvailableinCountrySection from "./components/AvailableCountrySection";
 import { useEffect } from "react";
 import { Observer } from 'tailwindcss-intersect';
+import { SessionProvider } from "next-auth/react";
 
 export default function Home() {
 
@@ -21,19 +22,21 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="font-display grid  items-center justify-items-center min-h-screen">
-      <Banner />
-      <Header />
-      <LandingSection />
-      <PaymentPartnerSection />
-      <HowP2PSection />
-      <OpenAccountSection />
-      <MoneyTransferSection />
-      <CurrencyConversionSection />
-      <OpenAccountCTA />
-      <CustomerReviewSection />
-      <AvailableinCountrySection />
-      <Footer />
-    </main>
+    <SessionProvider>
+      <main className="font-display grid  items-center justify-items-center min-h-screen">
+        <Banner />
+        <Header />
+        <LandingSection />
+        <PaymentPartnerSection />
+        <HowP2PSection />
+        <OpenAccountSection />
+        <MoneyTransferSection />
+        <CurrencyConversionSection />
+        <OpenAccountCTA />
+        <CustomerReviewSection />
+        <AvailableinCountrySection />
+        <Footer />
+      </main>
+    </SessionProvider>
   );
 }

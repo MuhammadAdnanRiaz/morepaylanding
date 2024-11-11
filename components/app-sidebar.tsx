@@ -2,16 +2,9 @@
 
 import * as React from "react";
 import {
-  DollarSign,
   AudioWaveform,
-  BookOpen,
-  HandIcon,
   Command,
-  Frame,
   GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
   Home,
   ArrowLeftRight,
   HandCoins,
@@ -20,7 +13,6 @@ import {
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
-import { NavProjects } from "@/components/nav-projects";
 import { NavUser } from "@/components/nav-user";
 import { TeamSwitcher } from "@/components/team-switcher";
 import {
@@ -57,29 +49,29 @@ const data = {
   ],
   navMain: [
     {
-      title: "Home",
-      url: "/home",
+      title: "Dashboard",
+      url: "/dashboard",
       icon: Home,
       isActive: true,
     },
     {
       title: "Bids",
-      url: "/home/bids",
+      url: "/dashboard/bids",
       icon: BadgeEuro,
     },
     {
       title: "Offers",
-      url: "/home/offers",
+      url: "/dashboard/offers",
       icon: HandCoins,
     },
     {
       title: "Transactions",
-      url: "#",
+      url: "/dashboard/transactions",
       icon: ArrowLeftRight,
     },
     {
       title: "Loyality",
-      url: "/home/loyality",
+      url: "/dashboard/loyality",
       icon: Coins,
     },
   ],
@@ -87,7 +79,7 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar className="border-none shadow-2xl font-display" collapsible="icon" {...props}>
+    <Sidebar className="border-none shadow-xl font-display" collapsible="icon" {...props}>
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>

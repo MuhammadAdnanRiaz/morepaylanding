@@ -7,7 +7,7 @@ export default async function LoginAuthPage() {
   const session = await getServerSession(authOptions);
 
   if (session?.user) {
-    redirect("/home");
+    redirect("/dashboard");
   }
 
   return <LoginAuthForm />; // Pass data as props to client component

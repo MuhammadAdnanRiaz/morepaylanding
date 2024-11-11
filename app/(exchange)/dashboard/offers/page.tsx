@@ -9,12 +9,9 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
 import { CreateOfferSidebar } from "@/app/(exchange)/dashboard/offers/_components/create-offer-sidebar";
 import { fetchUserWallets } from "@/services/wallet/get-user-wallets";
-import { listOffersService } from "@/services/offers/listOffers";
-import { Offer } from "@/services/offers/types";
-import OfferListItem from "./offer-list";
+import OfferListView from "./_components/list-view";
 
 export default async function OfferPage() {
-  const offersList = await listOffersService();
   const wallets = await fetchUserWallets();
   return (
     <>
@@ -44,9 +41,7 @@ export default async function OfferPage() {
             <CreateOfferSidebar wallets={wallets} />
           </div>
           <div className="space-y-1">
-            {offersList?.map((offer: Offer) => [
-              <OfferListItem key={offer.id} offer={offer} />,
-            ])}
+            <OfferListView />
           </div>
         </div>
       </div>

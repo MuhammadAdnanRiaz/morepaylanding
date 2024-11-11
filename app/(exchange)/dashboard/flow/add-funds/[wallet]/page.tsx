@@ -42,7 +42,7 @@ export default async function AddBalance({
             <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
                 <div className="container flex flex-col justify-center items-center mx-auto w-full py-10">
                     <p className="text-xl font-extrabold mb-4">Add money</p>
-                    <AddWalletFundForm />
+                    <AddWalletFundForm currency={selectedWallet?.currency.id} localWallet={localWallet} />
                 </div>
             </div>
         </>

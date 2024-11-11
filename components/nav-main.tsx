@@ -18,6 +18,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
+import Link from "next/link";
 
 export function NavMain({
   items,
@@ -45,13 +46,14 @@ export function NavMain({
             defaultOpen={item.isActive}
             className="group/collapsible"
           >
-            <SidebarMenuItem>
-              <CollapsibleTrigger asChild>
+            <SidebarMenuItem >
+              <Link href={item.url}>
                 <SidebarMenuButton
+
                   className={
                     pathname === item.url
                       ? `bg-deep-forest-green-600/80 rounded-2xl text-gray-900 font-extrabold py-5 max-w-xs`
-                      : "hover:bg-deep-forest-green-600/60 hover:rounded-2xl hover:text-gray-900 hover:font-extrabold hover:py-5 hover:max-w-xs"
+                      : "hover:bg-deep-forest-green-600/60 hover:rounded-2xl hover:text-gray-900 hover:font-extrabold py-5 hover:max-w-xs"
                   }
                   tooltip={item.title}
                 >
@@ -61,8 +63,12 @@ export function NavMain({
                     <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                   )}
                 </SidebarMenuButton>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
+              </Link>
+
+              {/* <CollapsibleTrigger asChild>
+               
+              </CollapsibleTrigger> */}
+              {/* <CollapsibleContent>
                 <SidebarMenuSub>
                   {item.items?.map((subItem) => (
                     <SidebarMenuSubItem key={subItem.title}>
@@ -74,7 +80,7 @@ export function NavMain({
                     </SidebarMenuSubItem>
                   ))}
                 </SidebarMenuSub>
-              </CollapsibleContent>
+              </CollapsibleContent> */}
             </SidebarMenuItem>
           </Collapsible>
         ))}

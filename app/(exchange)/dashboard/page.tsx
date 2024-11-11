@@ -18,19 +18,24 @@ export default async function HomePage() {
   const userWallets = await fetchUserWallets()
   return (
     <>
-      <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
-        <div className="flex items-center gap-2 px-4">
-          <SidebarTrigger className="-ml-1" />
-          <Separator orientation="vertical" className="mr-2 h-4" />
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem className="hidden md:block">
-                <BreadcrumbLink href="#">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+      <>
+        <div>
+          <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+            <div className="flex items-center gap-2 px-4">
+              <SidebarTrigger className="-ml-1" />
+              <Separator orientation="vertical" className="mr-2 h-4" />
+              <Breadcrumb>
+                <BreadcrumbList>
+                  <BreadcrumbItem className="hidden md:block">
+                    <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+            </div>
+          </header>
         </div>
-      </header>
+      </>
+
       <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
         <div className="flex gap-4 ">
           {userWallets.map(wallet => {
@@ -41,16 +46,20 @@ export default async function HomePage() {
           <CreateWalletButton />
 
         </div>
-        <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min">
-          <div className="grid grid-cols-12 gap-4 ">
-            <div className="col-span-3">
-              <TransactionConfidenceScoreDonut />
-            </div>
-            <div className="col-span-3">
-              <LoyaltyDonutChart />
+        <div className="min-h-[100vh] flex-1 rounded-xl md:min-h-min">
+          <div className="grid grid-cols-2 gap-4 max-h-[50px] ">
+            <div className="grid gap-4 grid-cols-2">
+              <div className="">
+                <TransactionConfidenceScoreDonut />
+              </div>
+              <div className="">
+                <LoyaltyDonutChart />
+              </div>
+
             </div>
 
-            <div className="bg-muted/50 w-full h-full col-span-6">
+
+            <div className="w-full h-full">
               <MostTradingCurrencies />
             </div>
           </div>

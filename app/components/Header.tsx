@@ -1,6 +1,11 @@
+import { useSession } from "next-auth/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const { status } = useSession()
+  const router = useRouter()
+
   return (
     <header className="w-full text-gray-600 font-display max-w-7xl">
       <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -31,12 +36,20 @@ export default function Header() {
           </a>
         </nav>
         <div className="space-x-2">
-          <button className="inline-flex h-10 border text-deep-forest-green-950 items-center py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-            Sign In
-          </button>
-          <button className="inline-flex text-white items-center bg-deep-forest-green-900 h-10 border-0 py-1 px-3 focus:outline-none hover:bg-deep-forest-green-800 rounded text-base mt-4 md:mt-0">
-            Open Account
-          </button>
+          {status !== "authenticated" ? (
+            <>
+              <button onClick={() => { router.replace('/login') }} className="inline-flex h-10 border text-deep-forest-green-950 items-center py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                Sign In
+              </button>
+              <button onClick={() => { router.replace('/register') }} className="inline-flex text-white items-center bg-deep-forest-green-900 h-10 border-0 py-1 px-3 focus:outline-none hover:bg-deep-forest-green-800 rounded text-base mt-4 md:mt-0">
+                Open Account
+              </button>
+            </>
+          ) : <button onClick={() => { router.replace('/login') }} className="inline-flex text-white items-center bg-deep-forest-green-900 h-10 border-0 py-1 px-3 focus:outline-none hover:bg-deep-forest-green-800 rounded text-base mt-4 md:mt-0">
+            Access Dashboard
+          </button>}
+
+
         </div>
       </div>
     </header>

@@ -23,7 +23,7 @@ export const authOptions: NextAuthOptions = {
       async authorize(credentials): Promise<AuthenticatedUser | null> {
         try {
           const res = await axios.post<AuthenticatedUser>(
-            "http://localhost:8004/auth/login/",
+            "http://localhost:8000/auth/login/",
             {
               email: credentials?.email,
               password: credentials?.password,

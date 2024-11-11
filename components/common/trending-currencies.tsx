@@ -31,13 +31,13 @@ const chartConfig = {
 
 export function MostTradingCurrencies() {
   return (
-    <Card>
+    <Card className="border-none">
       <CardHeader>
         <CardTitle>Most Traded Currencies</CardTitle>
         <CardDescription>This Month</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="h-[172px] w-full">
+        <ChartContainer config={chartConfig} className="max-h-[190px] w-full">
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis

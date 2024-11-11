@@ -45,7 +45,7 @@ export default function LoginPage() {
 
     if (result?.ok) {
       // Redirect to /home if login was successful
-      router.push("/home");
+      router.push("/dashboard");
     } else if (result?.error) {
       // Show error message from backend if login failed
       toast.error(result.error, {});
